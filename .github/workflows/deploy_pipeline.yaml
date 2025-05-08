@@ -1,0 +1,31 @@
+name: Deploy PySpark Jobs to GCS
+
+on:
+  push:
+    branches:
+      - main  # Solo se ejecuta cuando se hace push/merge a main
+
+jobs:
+  upload_jobs:
+    name: Upload Spark Jobs and Config to GCS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install jq (para leer JSON en el script)
+        run: sudo apt-get install -y jq
+
+      - name: Set up GCP credentials
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: '${{ secrets.GCP_KEY_JSON }}'
+
+      - name: Upload Spark jobs to GCS
+        run: bash ci-cd/upload_jobs.sh

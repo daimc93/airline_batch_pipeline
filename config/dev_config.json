@@ -7,7 +7,7 @@
         "gold": "airline-gold-bucket"
     },
     "bigquery": {
-        "dataset": "airline_analytics"
+        "dataset": "airline_dev_analytics"
     },
     "sql_server": {
         "jdbc_url": "jdbc:sqlserver://<ip>:1433;databaseName=<db>",

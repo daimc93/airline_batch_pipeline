@@ -1,0 +1,32 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+
+# Airflow/Composer artifacts
+airflow.db
+airflow.cfg
+logs/
+untracked/
+.env
+
+# VSCode files
+.vscode/
+
+# Python virtual environments
+.venv/
+venv/
+ENV/
+
+# Config files
+config/*.json
+!config/dev_config.json
+
+# Jupyter notebooks (optional)
+.ipynb_checkpoints/
+
+# Data files
+data_samples/
+*.csv
+*.json
