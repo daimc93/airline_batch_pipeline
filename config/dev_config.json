@@ -1,0 +1,21 @@
+{
+    "project_id": "your-gcp-project-id",
+    "region": "us-central1",
+    "buckets": {
+        "bronze": "airline-bronze-bucket",
+        "silver": "airline-silver-bucket",
+        "gold": "airline-gold-bucket"
+    },
+    "bigquery": {
+        "dataset": "airline_analytics"
+    },
+    "sql_server": {
+        "jdbc_url": "jdbc:sqlserver://<ip>:1433;databaseName=<db>",
+        "user": "your_user",
+        "password": "your_password"
+    },
+    "api": {
+        "base_url": "https://api.example.com/endpoint",
+        "auth_token": "your_api_token"
+    }
+}
