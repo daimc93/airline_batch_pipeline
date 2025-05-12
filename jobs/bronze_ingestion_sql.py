@@ -44,7 +44,7 @@ if df.count() > 0:
         VALUES ('{source}', TIMESTAMP('{max_date}'))
     """
     client.query(insert_query).result()
-    print(f"SQL Server cargado: nuevos registros hasta {max_date}")
+    print(f"✅ SQL Server cargado: nuevos registros hasta {max_date}")
 else:
-    print("No hay registros nuevos en SQL.")
+    print("✅ No hay registros nuevos en SQL.")
 
