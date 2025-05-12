@@ -35,4 +35,4 @@ df.write \
     .mode("overwrite") \
     .save()
 
-print("✅ Datos exportados correctamente a BigQuery.")
+print("Datos exportados correctamente a BigQuery.")
